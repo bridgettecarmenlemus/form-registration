@@ -26,7 +26,10 @@ export default function basicForm() {
          placeholder="Email"
          name="email"
          />
-
+         <button 
+         class="form-field" 
+         type="submit">Register
+         </button>
       </form>
     </div>
   )
