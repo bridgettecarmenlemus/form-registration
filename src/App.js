@@ -17,7 +17,16 @@ export default function basicForm() {
         class="form-field"
         type="text"
         placeholder="Last Name"
-        name="lastName"/>
+        name="lastName"
+        />
+        <input
+         id="email"
+         class="form-field"
+         type="text"
+         placeholder="Email"
+         name="email"
+         />
+
       </form>
     </div>
   )
