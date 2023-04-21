@@ -12,6 +12,12 @@ export default function basicForm() {
         placeholder="First Name"
         name="firstName"
         />
+        <input
+        id="last-name"
+        class="form-field"
+        type="text"
+        placeholder="Last Name"
+        name="lastName"/>
       </form>
     </div>
   )
