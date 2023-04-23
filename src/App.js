@@ -37,6 +37,7 @@ export default function BasicForm() {
         placeholder="First Name"
         name="firstName"
         />
+        {submitted && !values.firstName? <span>Please enter a first name</span> : null}
         <input
         onChange={handleLastNameInputChange}
         value={values.lastName}
@@ -46,6 +47,7 @@ export default function BasicForm() {
         placeholder="Last Name"
         name="lastName"
         />
+        {submitted && !values.lastName? <span>Please enter a last name</span> : null} 
         <input
         onChange={handleEmailInputChange}
         value={values.email}
@@ -55,6 +57,7 @@ export default function BasicForm() {
          placeholder="Email"
          name="email"
          />
+         {submitted && !values.email?<span>Please enter a first name</span> : null}
          <button 
          class="form-field" 
          type="submit">Register
