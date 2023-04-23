@@ -8,6 +8,8 @@ export default function BasicForm() {
       email:"" 
      })
 
+  const [submitted, setSubmitted] = useState(false)
+
   const handleFirstNameInputChange = (event) => {
     setValues({...values, firstName: event.target.value})
   }
@@ -17,9 +19,15 @@ export default function BasicForm() {
   const handleEmailInputChange = (event) => {
     setValues({...values, email: event.target.value})
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    setSubmitted(true)
+  }
   return (
     <div className="form-container">
-      <form className="register-form">
+      <form className="register-form" onSubmit={handleSubmit}>
+        {submitted ?  <div className="success-message">Success! Thank you for registering</div> : null}
         <input
         onChange={handleFirstNameInputChange}
         value={values.firstName}
