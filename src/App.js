@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css"
 
-export default function basicForm() {
+export default function BasicForm() {
+  const [values, setValues] = useState({
+      firstName:"",
+      lastName:"",
+      email:"" 
+     })
+
+  const handleFirstNameInputChange = (event) => {
+    setValues({...values, firstName: event.target.value})
+  }
+  const handleLastNameInputChange = (event) => {
+    setValues({...values, lastName: event.target.value})
+  }
+  const handleEmailInputChange = (event) => {
+    setValues({...values, email: event.target.value})
+  }
   return (
     <div className="form-container">
       <form className="register-form">
         <input
+        onChange={handleFirstNameInputChange}
+        value={values.firstName}
         id="first-name"
         class="form-field"
         type="text"
@@ -13,6 +30,8 @@ export default function basicForm() {
         name="firstName"
         />
         <input
+        onChange={handleLastNameInputChange}
+        value={values.lastName}
         id="last-name"
         class="form-field"
         type="text"
@@ -20,6 +39,8 @@ export default function basicForm() {
         name="lastName"
         />
         <input
+        onChange={handleEmailInputChange}
+        value={values.email}
          id="email"
          class="form-field"
          type="text"
