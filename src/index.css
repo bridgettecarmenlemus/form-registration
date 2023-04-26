@@ -1,13 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-/* body {
+body {
     background-color: aquamarine;
     display: flex;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-} */
+} 
 
 .form-container {
     width: 360px;

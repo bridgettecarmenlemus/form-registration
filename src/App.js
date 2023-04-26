@@ -27,6 +27,9 @@ export default function BasicForm() {
     setSubmitted(true)
   }
   return (
+   <head>
+    <style> @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
     <div className="form-container">
       <form className="register-form" onSubmit={handleSubmit}>
         {submitted && valid ?  <div className="success-message">Success! Thank you for registering</div> : null}
@@ -34,7 +37,7 @@ export default function BasicForm() {
         onChange={handleFirstNameInputChange}
         value={values.firstName}
         id="first-name"
-        class="form-field"
+        className="form-field"
         type="text"
         placeholder="First Name"
         name="firstName"
@@ -44,7 +47,7 @@ export default function BasicForm() {
         onChange={handleLastNameInputChange}
         value={values.lastName}
         id="last-name"
-        class="form-field"
+        className="form-field"
         type="text"
         placeholder="Last Name"
         name="lastName"
@@ -54,17 +57,19 @@ export default function BasicForm() {
         onChange={handleEmailInputChange}
         value={values.email}
          id="email"
-         class="form-field"
+         className="form-field"
          type="text"
          placeholder="Email"
          name="email"
          />
          {submitted && !values.email ?<span>Please enter a first name</span> : null}
          <button 
-         class="form-field" 
+         className="form-field" 
          type="submit">Register
          </button>
       </form>
     </div>
+    </style>
+    </head>
   )
 }
