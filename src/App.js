@@ -27,9 +27,7 @@ export default function BasicForm() {
     setSubmitted(true)
   }
   return (
-   <head>
-    <style> @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+   
     <div className="form-container">
       <form className="register-form" onSubmit={handleSubmit}>
         {submitted && valid ?  <div className="success-message">Success! Thank you for registering</div> : null}
@@ -69,7 +67,5 @@ export default function BasicForm() {
          </button>
       </form>
     </div>
-    </style>
-    </head>
   )
 }

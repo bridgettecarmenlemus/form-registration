@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poltawski+Nowy:wght@500&display=swap');
 
 body {
     background-color: aquamarine;
@@ -21,4 +21,8 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     padding: 10px;
+  }
+
+  .success-message {
+    font-family: 'Poltawski Nowy', serif;
   }
